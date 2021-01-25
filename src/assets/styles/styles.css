@@ -1,0 +1,79 @@
+
+/* @font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Medium.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: SF Pro Display;
+  src: url(../fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: SF Pro Display;
+  src: url(../fonts/FontsFree-Net-SFProDisplay-Semibold.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: SF Pro Display;
+  src: url(../fonts/FontsFree-Net-SFProDisplay-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  font-family: Poppins;
+}
+
+.font-poppins {
+  font-family: Poppins;
+}
+
+.font-sf-pro {
+  font-family: SF Pro Display;
+}
+
+.fs-base {
+  font-size: 16px;
+}
+
+.fs-md {
+  font-size: 18px;
+}
+
+.fs-lg {
+  font-size: 20px;
+}
+
+.fs-xl {
+  font-size: 22px;
+}
+
+.fs-2xl {
+  font-size: 24px;
+}
+
+.search-icons {
+  height: 15px;
+  width: 15px;
+}

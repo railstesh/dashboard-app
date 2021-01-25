@@ -1,0 +1,26 @@
+
+.light-gray {
+  color: #3C3C43;
+  opacity: 60%;
+}
+
+.light-black {
+  color: #11263C !important;
+}
+
+.gray-50 {
+  color: #D0D1D2;
+}
+
+.background-gray {
+  background-color: #D0D1D2;
+}
+
+.light-violet {
+  color: #422F8A;
+  opacity: 87%;
+}
+
+.border-gray-light {
+  border-color: #D0D1D2;
+}
