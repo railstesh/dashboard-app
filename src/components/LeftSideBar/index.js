@@ -6,38 +6,38 @@ import airBnb from '../../assets/icons/Airbnb Icon.png';
 
 export default function LeftSideBar () {
   return (
-    <div className='bg-white py-4 d-flex flex-col justify-content-between h-100'>
-      <div className=''>
-        <div className='my-2 mb-5'>
+    <div className='bg-white py-4 d-flex flex-column justify-content-between h-100'>
+      <div className='text-center ml-4'>
+        <div className='my-2 mb-5 d-flex'>
           <Menu fill='#D0D1D2' className='' size={20} />
         </div>
-        <div className='my-3'>
+        <div className='my-3 d-flex'>
           <img src={bitCoin} alt='' className='' />
         </div>
-        <div className='my3'>
+        <div className='my3 d-flex'>
           <img src={smile} alt='' className='' />
         </div>
-        <div className='my-3'>
+        <div className='my-3 d-flex'>
           <img src={airBnb} alt='' className='' />
         </div>
-        <div className=''>
+        <div className='mt-5 my-3 left-side-panel-icons-container'>
           <Command size={14} className='' />
         </div>
-        <div className=''>
+        <div className='my-3 left-side-panel-icons-container'>
           <PieChart size={14} className='' />
         </div>
-        <div className=''>
+        <div className='my-3 left-side-panel-icons-container'>
           <Clock size={14} className='' />
         </div>
-        <div className=''>
+        <div className='my-3 left-side-panel-icons-container'>
           <Globe size={14} className='' />
         </div>
-        <div className=''>
+        <div className='my-3 left-side-panel-icons-container'>
           <Loader size={14} className='' />
         </div>
       </div>
-      <div className=''>
-        <img src={} alt='' className />
+      <div className=' left-side-panel-icons-container'>
+        <MessageSquare size={14} className='' />
       </div>
     </div>
   );

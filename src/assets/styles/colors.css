@@ -24,3 +24,8 @@
 .border-gray-light {
   border-color: #D0D1D2;
 }
+
+.light-secondary-gray {
+  color: #3C3C43;
+  opacity: 60%;
+}

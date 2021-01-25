@@ -1,14 +1,17 @@
 import React from 'react';
 import LeftSideBar from '../LeftSideBar';
-import RightSideBar from '../RightSideBar';
 import MainContent from './MainContent';
-
+import Header from '../Header';
 export default function MainContentArea () {
   return (
-    <div className=''>
-      <LeftSideBar />
-      <MainContent />
-      <RightSideBar />
+    <div className='row'>
+      <div className='col-auto'>
+        <LeftSideBar />
+      </div>
+      <div className='col-11'>
+        <Header />
+        <MainContent />
+      </div>
     </div>
   );
 }

@@ -53,6 +53,14 @@ body {
   font-family: SF Pro Display;
 }
 
+.fs-xs {
+  font-size: 8px;
+}
+
+.fs-sm {
+  font-size: 12px;
+}
+
 .fs-base {
   font-size: 16px;
 }
@@ -76,4 +84,22 @@ body {
 .search-icons {
   height: 15px;
   width: 15px;
+}
+
+.left-side-panel-icons-container {
+  width: max-content;
+  padding: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.006);
+  border-radius: 15px;
+  border: 1px solid #F2F2F7;
+}
+
+.main-content-container {
+  background-color: #F2F2F7;
+}
+
+.chart-tooltip-container {
+  padding: 14px;
+  box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+  background-color: white; 
 }
