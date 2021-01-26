@@ -58,15 +58,15 @@ export default class MainContent extends React.Component {
     const activePercentageData = this.getPercentageData(data['active_users']);
 
     return (
-      <div className='main-content-container container-fluid px-0'>
-        <div className='bg-white p-4'>
-          <div className='ml-4 my-4 d-flex flex-column justify-content-start align-content-start w-100'>
-            <div className='my-2 align-items-center font-weight-bold text-uppercase fs-sm font-sf-pro d-flex w-100'>
+      <div className='d-flex justify-content-between px-0'>
+        <div className='bg-white p-4 container-fluid'>
+          <div className='ml-4 my-4 d-flex flex-column justify-content-start align-content-start'>
+            <div className='my-2 align-items-center font-weight-bold text-uppercase fs-sm font-sf-pro d-flex'>
               <p className='light-violet mx-1 mb-0'>Dashboard</p>
               <ChevronRight className='mx-2' strokeWidth={4} stroke='#D0D1D2' size={15} />
               <p className='gray-50 mx-1 mb-0'>bitforex.com</p>
             </div>
-            <div className='ml-4 my-2 d-flex w-100'>
+            <div className='my-2 d-flex'>
               <img src={darkMoon} className='mx-1' alt='dark-moon' />
               <p className='mx-3 light-black font-sf-pro fs-3lg mb-0'>b.copper</p>
               <div style={{ width: '45px', height: '45px' }} className='d-flex justify-content-center align-items-center light-violet mx-1 rounded-circle background-light-gray'>
@@ -85,11 +85,11 @@ export default class MainContent extends React.Component {
               customizedTooltip={this.customizedTooltip}
             />
           </div>
-        </div>
-        <div className='p-4 bg-white d-flex justify-content-between w-100'>
-          <PerpetualPieChart data={pieChartData} />
-          <div className='d-flex'>
-            <ActivePercentageBarGraph data={activePercentageData} />
+          <div className='d-flex justify-content-between w-100'>
+            <PerpetualPieChart data={pieChartData} />
+            <div className='d-flex'>
+              <ActivePercentageBarGraph data={activePercentageData} />
+            </div>
           </div>
         </div>
         <RighSideBar />

@@ -4,11 +4,11 @@ import MainContent from './MainContent';
 import Header from '../Header';
 export default function MainContentArea () {
   return (
-    <div className='row'>
-      <div className='col-auto'>
+    <div className='d-flex py-0 px-0'>
+      <div className='px-0'>
         <LeftSideBar />
       </div>
-      <div className='col-11'>
+      <div className='px-0' style={{ width: '100vw' }}>
         <Header />
         <MainContent />
       </div>

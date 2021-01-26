@@ -92,9 +92,10 @@ body {
 .fs-3xl {
   font-size: 30px;
 }
+
 .search-icons {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
 }
 
 .left-side-panel-icons-container {
@@ -105,8 +106,16 @@ body {
   border: 1px solid #F2F2F7;
 }
 
-.main-content-container {
+.right-side-container {
   background-color: #F2F2F7;
+  padding: 32px;
+  height: 100vh;
+  width: 25%;
+}
+
+.right-side-trading-icons {
+  width: 50px;
+  height: 50px;
 }
 
 .chart-tooltip-container {

@@ -6,18 +6,18 @@ import airBnb from '../../assets/icons/Airbnb Icon.png';
 
 export default function LeftSideBar () {
   return (
-    <div className='bg-white py-4 d-flex flex-column justify-content-between h-100'>
-      <div className='text-center ml-4'>
-        <div className='my-2 mb-5 d-flex'>
-          <Menu fill='#D0D1D2' className='' size={20} />
+    <div className='border-right border-gray-lighter bg-white py-4 px-3 d-flex flex-column justify-content-between' style={{ height: '100vh' }}>
+      <div className='text-center'>
+        <div className='my-2 mb-5'>
+          <Menu stroke='#D0D1D2' className='' size={20} />
         </div>
-        <div className='my-3 d-flex'>
+        <div className='my-3'>
           <img src={bitCoin} alt='' className='' />
         </div>
-        <div className='my3 d-flex'>
+        <div className='my3'>
           <img src={smile} alt='' className='' />
         </div>
-        <div className='my-3 d-flex'>
+        <div className='my-3'>
           <img src={airBnb} alt='' className='' />
         </div>
         <div className='mt-5 my-3 left-side-panel-icons-container'>
@@ -36,7 +36,7 @@ export default function LeftSideBar () {
           <Loader size={14} className='' />
         </div>
       </div>
-      <div className=' left-side-panel-icons-container'>
+      <div className='left-side-panel-icons-container'>
         <MessageSquare size={14} className='' />
       </div>
     </div>
