@@ -6,7 +6,6 @@ import PerpetualPieChart from './PerpetualPieChart';
 import ActivePercentageBarGraph from './ActivePercentageBarGraph';
 import moment from 'moment';
 import darkMoon from '../../assets/icons/dark_moon.png';
-import { data } from './utility';
 
 export default class MainContent extends React.Component {
 
@@ -47,12 +46,11 @@ export default class MainContent extends React.Component {
       }
       return acc;
     }, {});
-    
-
     return [{ ...percentagePayload }];
   }
 
   render () {
+    const { data } = this.props;
     const formattedData = this.getFormattedData(data['total_visits']);
     const pieChartData = this.convertToArray(data['sources']);
     const activePercentageData = this.getPercentageData(data['active_users']);

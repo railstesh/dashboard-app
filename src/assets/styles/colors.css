@@ -1,7 +1,7 @@
 
 .light-gray {
   color: #3C3C43;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .light-black {
@@ -26,17 +26,17 @@
 
 .light-violet {
   color: #422F8A;
-  opacity: 87%;
+  opacity: 0.87;
 }
 
 .fill-light-violet {
   fill: #422F8A;
-  opacity: 87%;
+  opacity: 0.87;
 }
 
 .stroke-light-violet {
   stroke: #422F8A;
-  opacity: 87%;
+  opacity: 0.87;
 }
 
 .border-gray-light {
@@ -49,5 +49,5 @@
 
 .light-secondary-gray {
   color: #3C3C43;
-  opacity: 60%;
+  opacity: 0.6;
 }
