@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  PieChart, Pie, Cell, Label, Legend, Text,
-} from 'recharts';
+import { PieChart, Pie, Cell, Legend } from 'recharts';
 import InfoIconText from '../InfoIconText';
 
 export default class PerpetualPieChart extends PureComponent {
