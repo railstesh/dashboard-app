@@ -3,7 +3,6 @@ import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 
 export default class ActivePercentageBarGraph extends PureComponent {
   render() {
-
     return (
       <BarChart
         layout='vertical'
