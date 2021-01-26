@@ -61,6 +61,10 @@ body {
   font-size: 12px;
 }
 
+.fs-base-sm {
+  font-size: 14px;
+}
+
 .fs-base {
   font-size: 16px;
 }
@@ -81,6 +85,13 @@ body {
   font-size: 24px;
 }
 
+.fs-3lg {
+  font-size: 26px;
+}
+
+.fs-3xl {
+  font-size: 30px;
+}
 .search-icons {
   height: 15px;
   width: 15px;

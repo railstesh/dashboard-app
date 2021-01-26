@@ -1,6 +1,8 @@
 import React from 'react';
 import moment from 'moment';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import { Calendar, MoreHorizontal } from 'react-feather';
+import { Legend, ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import InfoIconText from '../InfoIconText';
 
 function CustomizedAxisTick (props) {
   const { x, y, payload, type } = props;
@@ -39,6 +41,26 @@ function CustomizedAxisTick (props) {
 }
 
 export default class TotalVisitsAreaChart extends React.PureComponent {
+  renderLegend = () => {
+    return (
+      <div className='w-100 d-flex justify-content-between align-items-center ml-4 my-4'>
+        <InfoIconText text='Total Visits'/>
+        <div className='w-25 d-flex justify-content-between align-items-center mr-4'>
+          <div style={{ backgroundColor: '#ECE9F1', borderRadius: '44px', height: '4px', width: '55px' }} />
+          <p className='font-sf-pro fs-sm font-weight-normal gray-50 mb-0'>Provisions Month</p>
+          <div className='fs-base-sm light-black border border-gray-lighter rounded-sm px-2 py-1'>
+            March 2020 <span>
+              <Calendar size={14} stroke='rgba(66, 47, 138, 0.87)' />
+            </span>
+          </div>
+          <div className='border border-gray-lighter rounded-sm' style={{ padding: '2px' }}>
+            <MoreHorizontal stroke='rgba(66, 47, 138, 0.87)' />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render () {
     const {
       data,
@@ -51,46 +73,45 @@ export default class TotalVisitsAreaChart extends React.PureComponent {
     } = this.props;
     return (
       <div className=''>
-        <AreaChart
-          width={1250}
-          height={360}
-          data={data}
-        >
-          <defs>
-            <linearGradient id='total-visits-chart-fill' x1='0' y1='0' x2='0' y2='1'>
-              <stop offset='5%' stopColor='#7459D9' stopOpacity={0.4}/>
-              <stop offset='95%' stopColor='#7459D9' stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <XAxis
-            axisLine={false}
-            tickLine={false}
-            type='number'
-            tickCount={xAxisTickCount}
-            tickFormatter={xAxisTickFormatter}
-            dataKey={xDataKey}
-            tick={<CustomizedAxisTick type='x' />}
-            domain={[ 'dataMin' , 'dataMax' ]}
-          />
-          <YAxis
-            domain={['auto', 'auto']}
-            axisLine={false}
-            tickLine={false}
-            type='number'
-            dataKey={yDataKey}
-            tickCount={yAxisTickCount}
-            interval='preserveStartEnd'
-            tick={<CustomizedAxisTick type='y' />}
-          />
-          <Tooltip content={customizedTooltip} />
-          <CartesianGrid 
-            vertical={false} 
-            strokeDasharray='0'
-            strokeWidth={2}
-            stroke='#ECE9F1'
-          />
-          <Area activeDot={{ strokeWidth: 4, r: 8 }} type='basisOpen' fill={'url(#total-visits-chart-fill)'} dataKey='visit' stroke='#7459D9' strokeWidth={4} /> 
-        </AreaChart>        
+        <ResponsiveContainer width='100%' height={360}>
+          <AreaChart data={data}>
+            <defs>
+              <linearGradient id='total-visits-chart-fill' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='5%' stopColor='#7459D9' stopOpacity={0.4}/>
+                <stop offset='95%' stopColor='#7459D9' stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Legend verticalAlign="top" align='left' content={this.renderLegend} />
+            <XAxis
+              axisLine={false}
+              tickLine={false}
+              type='number'
+              tickCount={xAxisTickCount}
+              tickFormatter={xAxisTickFormatter}
+              dataKey={xDataKey}
+              tick={<CustomizedAxisTick type='x' />}
+              domain={[ 'dataMin' , 'dataMax' ]}
+            />
+            <YAxis
+              domain={['auto', 'auto']}
+              axisLine={false}
+              tickLine={false}
+              type='number'
+              dataKey={yDataKey}
+              tickCount={yAxisTickCount}
+              interval='preserveStartEnd'
+              tick={<CustomizedAxisTick type='y' />}
+            />
+            <Tooltip content={customizedTooltip} />
+            <CartesianGrid 
+              vertical={false} 
+              strokeDasharray='0'
+              strokeWidth={2}
+              stroke='#ECE9F1'
+            />
+            <Area activeDot={{ strokeWidth: 4, r: 8 }} type='basisOpen' fill={'url(#total-visits-chart-fill)'} dataKey='visit' stroke='#7459D9' strokeWidth={4} /> 
+          </AreaChart>
+        </ResponsiveContainer>      
       </div>
     )
   }

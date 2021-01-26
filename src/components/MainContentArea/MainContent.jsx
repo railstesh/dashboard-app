@@ -1,9 +1,11 @@
 import React from 'react';
+import { ChevronRight, Plus } from 'react-feather';
 import RighSideBar from '../RightSideBar';
 import TotalVisitsAreaChart from './TotalVisitsAreaChart';
 import PerpetualPieChart from './PerpetualPieChart';
 import ActivePercentageBarGraph from './ActivePercentageBarGraph';
 import moment from 'moment';
+import darkMoon from '../../assets/icons/dark_moon.png';
 import { data } from './utility';
 
 export default class MainContent extends React.Component {
@@ -56,19 +58,35 @@ export default class MainContent extends React.Component {
     const activePercentageData = this.getPercentageData(data['active_users']);
 
     return (
-      <div className='main-content-container'>
-        <div className='bg-white'>
-          <TotalVisitsAreaChart
-            data={formattedData}
-            xAxisTickCount={7}
-            yAxisTickCount={4}
-            xAxisTickFormatter={x => x}
-            xDataKey='d'
-            yDataKey='visit'
-            customizedTooltip={this.customizedTooltip}
-          />
+      <div className='main-content-container container-fluid px-0'>
+        <div className='bg-white p-4'>
+          <div className='ml-4 my-4 d-flex flex-column justify-content-start align-content-start w-100'>
+            <div className='my-2 align-items-center font-weight-bold text-uppercase fs-sm font-sf-pro d-flex w-100'>
+              <p className='light-violet mx-1 mb-0'>Dashboard</p>
+              <ChevronRight className='mx-2' strokeWidth={4} stroke='#D0D1D2' size={15} />
+              <p className='gray-50 mx-1 mb-0'>bitforex.com</p>
+            </div>
+            <div className='ml-4 my-2 d-flex w-100'>
+              <img src={darkMoon} className='mx-1' alt='dark-moon' />
+              <p className='mx-3 light-black font-sf-pro fs-3lg mb-0'>b.copper</p>
+              <div style={{ width: '45px', height: '45px' }} className='d-flex justify-content-center align-items-center light-violet mx-1 rounded-circle background-light-gray'>
+                <Plus strokeWidth={4} className='fill-light-violet stroke-light-violet' size={20} />
+              </div>
+            </div>
+          </div>
+          <div className=''>
+            <TotalVisitsAreaChart
+              data={formattedData}
+              xAxisTickCount={7}
+              yAxisTickCount={4}
+              xAxisTickFormatter={x => x}
+              xDataKey='d'
+              yDataKey='visit'
+              customizedTooltip={this.customizedTooltip}
+            />
+          </div>
         </div>
-        <div className='bg-white d-flex justify-content-between w-100'>
+        <div className='p-4 bg-white d-flex justify-content-between w-100'>
           <PerpetualPieChart data={pieChartData} />
           <div className='d-flex'>
             <ActivePercentageBarGraph data={activePercentageData} />

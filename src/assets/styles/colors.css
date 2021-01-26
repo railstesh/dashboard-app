@@ -16,13 +16,31 @@
   background-color: #D0D1D2;
 }
 
+.background-light-gray {
+  background-color: #F8F9FE;
+}
+
 .light-violet {
   color: #422F8A;
   opacity: 87%;
 }
 
+.fill-light-violet {
+  fill: #422F8A;
+  opacity: 87%;
+}
+
+.stroke-light-violet {
+  stroke: #422F8A;
+  opacity: 87%;
+}
+
 .border-gray-light {
   border-color: #D0D1D2;
+}
+
+.border-gray-lighter {
+  border-color: #ECE9F1;
 }
 
 .light-secondary-gray {
