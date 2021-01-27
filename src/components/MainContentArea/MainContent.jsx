@@ -58,7 +58,7 @@ export default class MainContent extends React.Component {
     return (
       <div className='row m-0 h-100'>
         <div className='bg-white p-4 container-fluid col-md-9 col-12'>
-          <div className='ml-4 my-4 d-flex flex-column justify-content-start align-content-start'>
+          <div className='ml-sm-4 my-4 d-flex flex-column justify-content-start align-content-start'>
             <div className='my-2 align-items-center font-weight-bold text-uppercase fs-sm font-sf-pro d-flex'>
               <p className='light-violet mx-1 mb-0'>Dashboard</p>
               <ChevronRight className='mx-2' strokeWidth={4} stroke='#D0D1D2' size={15} />
@@ -81,12 +81,13 @@ export default class MainContent extends React.Component {
               xDataKey='d'
               yDataKey='visit'
               customizedTooltip={this.customizedTooltip}
+              isTabletOrMobile={this.props.isTabletOrMobile}
             />
           </div>
-          <div className='d-flex justify-content-between w-100'>
+          <div className='d-xl-flex justify-content-between w-100'>
             <PerpetualPieChart data={pieChartData} />
             <div className='d-flex'>
-              <ActivePercentageBarGraph data={activePercentageData} />
+              <ActivePercentageBarGraph isTabletOrMobile={this.props.isTabletOrMobile} data={activePercentageData} />
             </div>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default class PerpetualPieChart extends PureComponent {
 
   render() {
     return (
-      <div className='d-flex justify-content-between'>
+      <div className='d-sm-flex justify-content-between'>
         <div className=''>
           <div className='ml-4 mt-4 text-left'>
             <InfoIconText text='Perpetual' />

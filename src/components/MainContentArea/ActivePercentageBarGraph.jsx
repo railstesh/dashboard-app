@@ -29,7 +29,6 @@ export default class ActivePercentageBarGraph extends PureComponent {
   }
 
   render() {
-
     const total = this.props.data && (this.props.data[0]['online'] + this.props.data[0]['offline']);
 
     return (
@@ -43,7 +42,7 @@ export default class ActivePercentageBarGraph extends PureComponent {
         <BarChart
           layout='vertical'
           maxBarSize={20}
-          width={500}
+          width={this.props.isTabletOrMobile ? 320 : 500}
           height={250}
           data={this.props.data}
         >

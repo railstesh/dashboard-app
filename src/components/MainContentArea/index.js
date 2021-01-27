@@ -36,7 +36,7 @@ export default class MainContentArea extends React.PureComponent {
               <Loader className='text-center mx-auto my-auto w-100'/>
             </div>
           )}
-          {this.state?.dashboardData && <MainContent data={this.state?.dashboardData} />}
+          {this.state?.dashboardData && <MainContent isTabletOrMobile={this.props.isTabletOrMobile} data={this.state?.dashboardData} />}
         </div> 
       </div>
     );
