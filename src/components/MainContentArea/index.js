@@ -26,10 +26,10 @@ export default class MainContentArea extends React.PureComponent {
   render () {
     return (
       <div className='d-flex py-0 px-0'>
-        <div className='px-0'>
+        <div className='px-0' style={{ minHeight: '100vh' }}>
           <LeftSideBar />
         </div>
-        <div className='px-0' style={{ width: '100vw' }}>
+        <div className='px-0 w-100 h-100'>
           <Header />
           {!this.state?.dashboardData && (
             <div className='w-100 h-100 my-auto mx-auto d-flex'> 

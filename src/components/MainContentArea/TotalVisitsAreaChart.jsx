@@ -43,12 +43,12 @@ function CustomizedAxisTick (props) {
 export default class TotalVisitsAreaChart extends React.PureComponent {
   renderLegend = () => {
     return (
-      <div className='w-100 d-flex justify-content-between align-items-center ml-4 my-4'>
-        <InfoIconText text='Total Visits'/>
-        <div className='w-25 d-flex justify-content-between align-items-center mr-4'>
-          <div style={{ backgroundColor: '#ECE9F1', borderRadius: '44px', height: '4px', width: '55px' }} />
-          <p className='font-sf-pro fs-sm font-weight-normal gray-50 mb-0'>Provisions Month</p>
-          <div className='fs-base-sm light-black border border-gray-lighter rounded-sm px-2 py-1'>
+      <div className='w-100 d-flex justify-content-between align-items-center my-4'>
+        <InfoIconText className='ml-4' text='Total Visits' />
+        <div className='d-flex justify-content-between align-items-center'>
+          <div className='mr-2' style={{ backgroundColor: '#ECE9F1', borderRadius: '44px', height: '4px', width: '55px' }} />
+          <p className='mr-2 font-sf-pro fs-sm font-weight-normal gray-50 mb-0'>Provisions Month</p>
+          <div className='mr-2 fs-base-sm light-black border border-gray-lighter rounded-sm px-2 py-1'>
             March 2020 <span>
               <Calendar size={14} stroke='rgba(66, 47, 138, 0.87)' />
             </span>

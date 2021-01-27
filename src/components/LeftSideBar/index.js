@@ -6,7 +6,7 @@ import airBnb from '../../assets/icons/Airbnb Icon.png';
 
 export default function LeftSideBar () {
   return (
-    <div className='border-right border-gray-lighter bg-white py-4 px-3 d-flex flex-column justify-content-between' style={{ height: '100vh' }}>
+    <div className='border-right border-gray-lighter bg-white py-4 px-3 d-flex flex-column justify-content-between h-100'>
       <div className='text-center'>
         <div className='my-2 mb-5'>
           <Menu stroke='#D0D1D2' className='' size={20} />

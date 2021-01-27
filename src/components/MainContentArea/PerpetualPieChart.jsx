@@ -20,9 +20,9 @@ export default class PerpetualPieChart extends PureComponent {
     return (
       <>
         {this.props.data.map((i, index) => (
-          <div key={index} className='w-75 mb-4'>
+          <div key={index} className='mb-4'>
             <div className='d-flex justify-content-between'>
-              <div style={{ backgroundColor: this.getColors(index), borderRadius: '44px', height: '4px', width: '30px' }} />
+              <div className='mr-2' style={{ backgroundColor: this.getColors(index), borderRadius: '44px', height: '4px', width: '30px' }} />
               <p className='mb-1 fs-base-sm gray-50'>{i.keys}</p>
             </div>
             <p className='mb-0 text-right font-weight-bold fs-base-sm light-black'>{i.value} users</p>
@@ -34,7 +34,7 @@ export default class PerpetualPieChart extends PureComponent {
 
   render() {
     return (
-      <div className='d-flex w-100'>
+      <div className='d-flex justify-content-between'>
         <div className=''>
           <div className='ml-4 mt-4 text-left'>
             <InfoIconText text='Perpetual' />
@@ -55,7 +55,7 @@ export default class PerpetualPieChart extends PureComponent {
             </Pie>
           </PieChart>
         </div>
-        <div className='w-25 my-auto'>
+        <div className='my-auto'>
           {this.renderPieChartInfo()}
         </div>
       </div>

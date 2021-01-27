@@ -9,7 +9,7 @@ import income from '../../assets/icons/income.png';
 
 export default function RightSideBar () {
   return (
-    <div className='right-side-container'>
+    <div className='right-side-container col-md-3 col-12'>
       <div className='text-left'>
         <InfoIconText text='Superiority' />
         <div className='mt-3 mb-2'>

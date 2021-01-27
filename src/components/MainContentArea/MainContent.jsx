@@ -56,8 +56,8 @@ export default class MainContent extends React.Component {
     const activePercentageData = this.getPercentageData(data['active_users']);
 
     return (
-      <div className='d-flex justify-content-between px-0'>
-        <div className='bg-white p-4 container-fluid'>
+      <div className='row m-0 h-100'>
+        <div className='bg-white p-4 container-fluid col-md-9 col-12'>
           <div className='ml-4 my-4 d-flex flex-column justify-content-start align-content-start'>
             <div className='my-2 align-items-center font-weight-bold text-uppercase fs-sm font-sf-pro d-flex'>
               <p className='light-violet mx-1 mb-0'>Dashboard</p>
